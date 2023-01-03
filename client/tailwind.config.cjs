@@ -7,6 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      'primary': '#6C00FF',
+      'secondary': '#6C00F',
+    },
+    fontFamily: {
+      'sans': ['Poppins', 'sans-serif'],
+      'secondary': ['Nunito', 'sans-serif'],
+    },
   },
+
+   
+  
   plugins: [require('flowbite/plugin')],
 }

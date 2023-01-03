@@ -1,5 +1,5 @@
 import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
-import Footer from "./components/Footer/Footer";
+import FooterSection from "./components/Footer/FooterSection";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
@@ -8,10 +8,10 @@ import Products from "./pages/Products/Products";
 // membuat layout
 const Layout = () =>{
   return(
-    <div className="app">
+    <div className="app ">
       <Navbar/>
       <Outlet/>
-      <Footer/>
+      <FooterSection/>
     </div>
   )
 }
