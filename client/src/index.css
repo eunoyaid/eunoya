@@ -5,8 +5,7 @@
 
 @layer base {
 
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
-    
+
      body{
       @apply bg-gray-50
      }
@@ -16,5 +15,12 @@
     }
     .navlink{
       @apply hover:text-orange-400 transition;
+    }
+
+    .title{
+      @apply capitalize text-2xl font-secondary mb-3
+    }
+    .section{
+      @apply my-20 text-center
     }
   }

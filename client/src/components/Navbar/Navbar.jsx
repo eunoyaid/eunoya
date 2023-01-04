@@ -7,12 +7,12 @@ import { Badge } from "flowbite-react";
 
 const Navbar = () => {
   return (
-    <div className="wrapper fixed z-50 left-0 right-0 flex justify-between bg-white p-4 rounded-lg w-[80%] mx-auto mt-4 font-nunito">
+    <div className="wrapper  fixed z-50 left-0 right-0 flex justify-between bg-white p-4 rounded-lg w-[80%] mx-auto mt-4 font-nunito">
       <div className="left">
         <Link to="/">Eunoya</Link>
       </div>
       <div className="right flex gap-8">
-        <div className="menu flex gap-3 ">
+        <div className="menu font-secondary  lg:flex gap-3 hidden">
           <Link to="products/1" className="navlink ">
             Website Wedding Invitation
           </Link>

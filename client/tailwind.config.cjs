@@ -8,12 +8,13 @@ module.exports = {
   theme: {
     extend: {},
     colors: {
-      'primary': '#6C00FF',
+      'primary': '#ED931E',
       'secondary': '#6C00F',
     },
     fontFamily: {
       'sans': ['Poppins', 'sans-serif'],
       'secondary': ['Nunito', 'sans-serif'],
+     
     },
   },
 

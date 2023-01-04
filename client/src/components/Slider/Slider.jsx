@@ -37,17 +37,17 @@ const Slider = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="h-100 sm:h-64 xl:h-80 2xl:h-96">
+    <div className="h-100 sm:h-64 xl:h-[100vh] 2xl:h-96">
     <Carousel>
       <img className="object-cover"
         src={data[0]}
         alt="..."
       />
-      <img className="object-cover"
+      <img className="object-cover "
         src={data[1]}
         alt="..."
       />
-      <img className="object-cover"
+      <img className="object-cover "
         src={data[2]}
         alt="..."
       />
