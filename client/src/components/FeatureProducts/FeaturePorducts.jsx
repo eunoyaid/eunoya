@@ -7,7 +7,7 @@ const FeaturePorducts = ({ type }) => {
       id: 1,
       img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
       img2: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-      title: "paradise t-shirt",
+      title: "kini shirt",
       isNew: true,
       oldPrice: 90000,
       price: 85000,
@@ -47,7 +47,7 @@ const FeaturePorducts = ({ type }) => {
           distinctio?
         </p>
       </div>
-      <div className="card-products flex gap-5 overflow-x-auto px-5 md:justify-center">
+      <div className="card-products h-[350px] flex gap-5 overflow-x-auto md:justify-center">
         {data.map((item) => (
           <Card item={item} key={item.id} />
         ))}
