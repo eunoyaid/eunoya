@@ -10,7 +10,7 @@ const Products = () => {
   const [sort, setSort] = useState(null);
 
   return (
-    <div className="flex flex-row gap-10 px-5 py-3">
+    <div className="flex flex-row gap-10 px-5 py-3 justify-center">
       <div className="left h-full  basis-1/4 p-10">
         <div className="filter-item my-3">
           <h2>Ketegori Produk</h2>
@@ -63,7 +63,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="right basis-3/4">
+      <div className="right basis-3/4 ">
         <img
           className="catImg h-[300px] w-full object-cover mb-10 rounded-lg "
           src="https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
