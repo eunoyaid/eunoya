@@ -1,8 +1,10 @@
 import { Button } from "flowbite-react";
 import React, { useState } from "react";
-
+import {MdFavoriteBorder} from 'react-icons/md'
+import Comments from "../../components/Comments/Comments";
 const Product = () => {
   const [selectedImg, setSelectedImg] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const images = [
     "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
@@ -40,7 +42,6 @@ const Product = () => {
             <h4 className="font-semibold text-xl product-name font-secondary capitalize">
               tema jowo
               <br />
-             
             </h4>
             <p className="price">Rp95000</p>
           </div>
@@ -53,7 +54,35 @@ const Product = () => {
               <li>fitur 4</li>
               <li>fitur 5</li>
             </ul>
-            <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis tempore, beatae sapiente culpa distinctio veniam itaque dolor modi necessitatibus.</p>
+            <p className="desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              nobis tempore, beatae sapiente culpa distinctio veniam itaque
+              dolor modi necessitatibus.
+            </p>
+
+            <div className="quantity flex gap-2 items-center my-3">
+              <Button
+                color="gray"
+                onClick={() =>
+                  setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                }
+              >
+                -
+              </Button>
+              {quantity}
+              <Button
+                color="gray"
+                onClick={() => setQuantity((prev) => prev + 1)}
+              >
+                +
+              </Button>
+            </div>
+          </div>
+          <div className="my-3 add-to-cart flex gap-2 items-center">
+            <Button color="gray">Tambah ke keranjang</Button>
+            <Button color="gray" >
+              <MdFavoriteBorder /> Favorite
+            </Button>
           </div>
           <div className="card-footer flex gap-2">
             <div>
@@ -64,6 +93,9 @@ const Product = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="section-comments my-5">
+     <Comments/>
       </div>
     </div>
   );
