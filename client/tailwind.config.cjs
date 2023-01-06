@@ -10,6 +10,9 @@ module.exports = {
     colors: {
       'primary': '#ED931E',
       'secondary': '#6C00F',
+      'card': '#FFF3E5',
+      'header': '#3C3C3C',
+      'background': '#FCFEFE',
     },
     fontFamily: {
       'sans': ['Poppins', 'sans-serif'],

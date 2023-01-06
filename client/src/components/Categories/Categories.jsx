@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CategoriesWi from "../../assets/categoriesWi.svg";
 
 const Categories = () => {
   const data = [
@@ -22,8 +23,9 @@ const Categories = () => {
         {data.map((item) => (
           <Link to={`products/${item.id}`}
             key={item.id}
-            className="bg-primary px-3 py-2 rounded-lg text-white"
+            className="bg-card p-4 rounded-xl flex gap-2 items-center transition border border-primary hover:-translate-y-1 hover:smooth-shadow "
           >
+            <img src={ CategoriesWi} className='w-8 h-8' alt="Logo" />
             {item.category}
           </Link>
         ))}

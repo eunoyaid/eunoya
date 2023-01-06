@@ -42,13 +42,13 @@ const Cart = () => {
   ];
 
   return (
-    <div className="relative " aria-labelledby="slide-over-title">
+    <div className="relative z-10 " aria-labelledby="slide-over-title">
       <div className="fixed inset-0 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="pointer-events-none fixed inset-y-0 right-0 flex  pl-10">
             <div className="pointer-events-auto px-16">
                 
-              <div className="flex mt-20 pb-6 flex-col  bg-white shadow-xl py-6 px-3 w-[390px] sm:px-6">
+              <div className="flex mt-20 pb-6 flex-col rounded-lg  bg-white shadow-xl py-6 px-3 w-[390px] sm:px-6">
               <div className="flex items-start justify-between ">
                     <h2
                       className="text-lg font-medium text-gray-900"
