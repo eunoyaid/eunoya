@@ -2,28 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-
-
-     body{
-      @apply bg-background text-header
-     }
-  
-    .icon{
-      @apply text-gray-500 hover:text-orange-400 transition cursor-pointer;
-    }
-    .navlink{
-      @apply hover:text-orange-400 transition;
-    }
-
-    .title{
-      @apply capitalize text-2xl font-secondary font-medium mb-5
-    }
-    .section{
-      @apply my-20 text-center
-    }
-    .smooth-shadow{
-    box-shadow: 0px 100px 145px rgba(47, 47, 47, 0.01), 0px 41.7776px 60.5775px rgba(47, 47, 47, 0.00718805), 0px 22.3363px 32.3876px rgba(47, 47, 47, 0.00770563), 0px 12.5216px 18.1562px rgba(47, 47, 47, 0.00821507), 0px 6.6501px 9.64265px rgba(47, 47, 47, 0.00754916), 0px 2.76726px 4.01252px rgba(47, 47, 47, 0.00500442);
-    }
+  body {
+    @apply bg-background text-header;
   }
+
+  .icon {
+    @apply text-gray-500 hover:text-orange-400 transition cursor-pointer;
+  }
+  .navlink {
+    @apply hover:text-orange-400 transition;
+  }
+
+  .title {
+    @apply capitalize text-2xl font-secondary font-medium mb-5;
+  }
+  .section {
+    @apply my-20 ;
+  }
+  .header-section{
+    @apply text-center
+  }
+  .smooth-shadow {
+    box-shadow: 0px 100px 145px rgba(47, 47, 47, 0.01),
+      0px 41.7776px 60.5775px rgba(47, 47, 47, 0.00718805),
+      0px 22.3363px 32.3876px rgba(47, 47, 47, 0.00770563),
+      0px 12.5216px 18.1562px rgba(47, 47, 47, 0.00821507),
+      0px 6.6501px 9.64265px rgba(47, 47, 47, 0.00754916),
+      0px 2.76726px 4.01252px rgba(47, 47, 47, 0.00500442);
+  }
+  .card {
+    @apply bg-white rounded-2xl p-5 smooth-shadow border-border-card border;
+  }
+  .thumbnail {
+    @apply bg-gray-400 h-60 rounded-xl  p-4 bg-no-repeat bg-center bg-cover;
+  }
+  .thumbnail-blog {
+    @apply bg-gray-400 h-40 rounded-xl  p-4 bg-no-repeat bg-center bg-cover;
+  }
+}

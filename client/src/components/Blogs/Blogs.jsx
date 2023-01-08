@@ -1,7 +1,8 @@
+import { Card } from "flowbite-react";
 import React from "react";
-import Card from "../Card/CardProduct";
+import { Link } from "react-router-dom";
 
-const FeaturePorducts = ({ type }) => {
+const Blogs = () => {
   const data = [
     {
       id: 1,
@@ -40,19 +41,33 @@ const FeaturePorducts = ({ type }) => {
 
   return (
     <div className="section">
-      <div className="header-section mb-10 ">
-        <h3 className="title font-semibold">{type} Products</h3>
-        <p className="subtitle">
-        temukan tema pilihan mu atau <a href="#" className="underline">buat dengan ide mu sendiri</a>
-        </p>
-      </div>
-      <div className="card-products h-[450px] flex gap-5 overflow-x-auto md:justify-center">
+      <div className="  h-[450px] flex gap-5 overflow-x-auto md:justify-center">
         {data.map((item) => (
-          <Card item={item} key={item.id} />
+          <Link to={`/blogs/${item.id}`}>
+            <div className="card w-[350px]" item={item} key={item.id}>
+              <div
+                className="thumbnail-blog"
+                style={{
+                  backgroundImage: `url('${item.img}')`,
+                }}
+              ></div>
+              <p className="desc my-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dignissimos, non.
+              </p>
+              <div className="flex justify-between">
+                <p className="author">oleh : tomtomo</p>
+                <div className="flex gap-2">
+                  <p> comment</p>
+                  <p> like</p>
+                </div>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
   );
 };
 
-export default FeaturePorducts;
+export default Blogs;
