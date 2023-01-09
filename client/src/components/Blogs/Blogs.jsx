@@ -1,5 +1,7 @@
 import { Card } from "flowbite-react";
 import React from "react";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { FaRegCommentDots } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
@@ -41,25 +43,31 @@ const Blogs = () => {
 
   return (
     <div className="section">
+        <div className="header-section mb-10 ">
+        <h3 className="title ">Blogs</h3>
+        <p className="subtitle">
+       sharing is caring
+        </p>
+      </div>
       <div className="  h-[450px] flex gap-5 overflow-x-auto md:justify-center">
         {data.map((item) => (
-          <Link to={`/blogs/${item.id}`}>
-            <div className="card w-[350px]" item={item} key={item.id}>
+          <Link to={`/blogs/${item.id}`} key={item.id}>
+            <div className="card w-[350px]"  >
               <div
                 className="thumbnail-blog"
                 style={{
                   backgroundImage: `url('${item.img}')`,
                 }}
               ></div>
-              <p className="desc my-2">
+              <p className="desc my-2 text-ellipsis">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Dignissimos, non.
               </p>
               <div className="flex justify-between">
-                <p className="author">oleh : tomtomo</p>
-                <div className="flex gap-2">
-                  <p> comment</p>
-                  <p> like</p>
+                <p className="author text-sm font-light text-gray-400">oleh : tomtomo</p>
+                <div className="flex gap-2 text-sm font-light text-gray-400">
+                  <p className="flex gap-1 items-center"> <FaRegCommentDots/> 20</p>
+                  <p className="flex gap-1 items-center"> <MdOutlineFavoriteBorder/>  10k</p>
                 </div>
               </div>
             </div>

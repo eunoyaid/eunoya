@@ -15,7 +15,7 @@
   }
 
   .title {
-    @apply capitalize text-2xl font-secondary font-medium mb-5;
+    @apply capitalize text-2xl font-secondary text-center mb-2 font-semibold;
   }
   .section {
     @apply my-20 ;

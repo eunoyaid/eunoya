@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import  axios  from "axios";
 import Card from "../Card/CardProduct";
 
 const FeaturePorducts = ({ type }) => {
@@ -38,10 +40,26 @@ const FeaturePorducts = ({ type }) => {
     },
   ];
 
+    const [products, setProducts] = useState()
+     useEffect(()=>{
+      const fetchData = async()=>{
+        try {
+          const data = await axios.get(process.env.NODE_ENV.REACT_APP_API_URL + '/products',{
+            Authorization : 'bearer' + process.env.NODE_ENV.REACT_APP_API_TOKEN,
+          });
+          console.log('data')
+        } catch (error) {
+          console.log(error.message)
+        }
+      }
+      fetchData()
+     }, [])
+
+
   return (
     <div className="section">
       <div className="header-section mb-10 ">
-        <h3 className="title font-semibold">{type} Products</h3>
+        <h3 className="title ">{type} Products</h3>
         <p className="subtitle">
         temukan tema pilihan mu atau <a href="#" className="underline">buat dengan ide mu sendiri</a>
         </p>

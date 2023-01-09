@@ -17,16 +17,16 @@ const NavbarEunoya = () => {
    
     <div>
       <Navbar
-        fluid={true}
+        
         className=" fixed z-20 left-0 right-0  bg-white smooth-shadow   rounded-xl w-[90%] mx-auto mt-4 font-nunito"
       >
         <Link to="/">
           <img src={logo} alt="Logo" />
         </Link>
 
-        <div className="flex md:order-2">
+        <div className="flex md:order-2 gap-1">
         <HiMagnifyingGlass className="icon my-auto h-6 w-6 mr-3" />
-        <div className="card-icon flex items-center gap-1 mr-3 relative">
+        <div className="card-icon flex items-center mr-3 relative">
               <BsCart2
                 className="icon h-6 w-6 "
                 onClick={() => setOpenCart(!openCart)}
@@ -35,9 +35,6 @@ const NavbarEunoya = () => {
               <span className="bg-primary text-xs font-medium text-white text-center p-1 leading-none rounded-full  dark:bg-blue-900 dark:text-primary absolute -translate-y-1/2 translate-x-1/2 left-auto top-2 right-0">0</span>
 
             </div>
-            
-
-
           <Dropdown
             className="mt-3 rounded-lg"
             arrowIcon={false}
@@ -81,6 +78,9 @@ const NavbarEunoya = () => {
       </Navbar>
       {openCart && <Cart />}
     </div>
+    
+
+
   );
 };
 

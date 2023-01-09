@@ -20,7 +20,7 @@ const Categories = () => {
 
   return (
     <div className="section">
-      <h5 className="title">Categories</h5>
+      <h5 className="title mb-10">Categories</h5>
       <div className="category flex gap-8 justify-center">
         {data.map((item) => (
           <Link
@@ -28,8 +28,11 @@ const Categories = () => {
             key={item.id}
             className="bg-card py-3 px-8 rounded-xl flex gap-4 items-center transition border border-border hover:border-primary hover:-translate-y-1 hover:smooth-shadow "
           >
-            <img src={CategoriesWi} className='w-8 h-8' alt="Logo" />
-            {item.category}
+            <img src={CategoriesWi} className="w-10 h-10" alt="Logo" />
+            <div className="categories">
+              <div className="category text-start font-medium text-primary uppercase"> {item.category}</div>
+              <div className="sub-category">{item.sub_categories}</div>
+            </div>
           </Link>
         ))}
       </div>
