@@ -41,13 +41,12 @@ const FeaturePorducts = ({ type }) => {
   return (
     <div className="section">
       <div className="header-section mb-10 ">
-        <h3 className="title ">{type} Products</h3>
+        <h3 className="title font-semibold">{type} Products</h3>
         <p className="subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem,
-          distinctio?
+        temukan tema pilihan mu atau <a href="#" className="underline">buat dengan ide mu sendiri</a>
         </p>
       </div>
-      <div className="card-products h-[350px] flex gap-5 overflow-x-auto md:justify-center">
+      <div className="card-products h-[450px] flex gap-5 overflow-x-auto md:justify-center">
         {data.map((item) => (
           <Card item={item} key={item.id} />
         ))}
