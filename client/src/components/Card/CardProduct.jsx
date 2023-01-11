@@ -11,34 +11,74 @@ const CardProduct = ({ item }) => {
             <div
               className="thumbnail"
               style={{
-                backgroundImage: `url('${item.img}')`,
+                backgroundImage: `url('${
+                  import.meta.env.VITE_REACT_APP_UPLOAD_URL +
+                  item.attributes.img.data.attributes.url
+                }')`,
               }}
             >
+              {/* <img
+                src={
+                  import.meta.env.VITE_REACT_APP_UPLOAD_URL +
+                  item.attributes.img.data.attributes.url
+                }
+                alt=""
+              /> */}
 
+              {item?.attributes.isNew && (
+                <span className="py-0.5 my-1.5 px-3 items-start flex w-fit bg-card rounded-lg text-primary  text-[12px] capitalize">
+                  terbaru
+                </span>
+              )}
             </div>
             <div className="flex mt-3 justify-between items-center mb-1 pt-2">
-              <h1 className="font-medium text-xl capitalize">{item.title}</h1>
+              <h1 className="font-medium text-xl capitalize">
+                {item?.attributes.title}
+              </h1>
               <div className=" flex gap-1 items-center ">
-                <button className="text-gray-300  flex gap-1 items-center  hover:text-pink-500  rounded-full">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"
-                    />
-                  </svg>
-                  <span className="text-xs"> 12k</span>
-                </button>
+                <div className="discount">
+                  {item.attributes.discount ? (
+                    <p className=" text-xs py-0.5 my-1.5 px-2 items-start flex w-fit bg-red-400 rounded-lg   text-white">
+                      -{item.attributes.discount}%
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                </div>
               </div>
             </div>
-            <div className="categories py-0.5 my-1.5 px-4 items-start flex w-fit bg-card rounded-lg text-primary lowercase text-[12px] ">
-              categories
+            <div className="categories py-0.5 my-1.5 px-3 items-start flex w-fit bg-card rounded-lg text-primary lowercase text-[12px] ">
+              {/* {data.map((item) => (
+                <Card item={item} key={item.id} />
+              ))} */}
+              {item.attributes.categories?.data.map((value, index) => (
+                <h1 className="mr-1" key={value.id}>
+                  {value.attributes?.title}{" "}
+                </h1>
+              ))}
+              {item.attributes.sub_categories?.data.map((value, index) => (
+                <h1 className="mr-1" key={value.id}>
+                  {value.attributes?.title}{" "}
+                </h1>
+              ))}
             </div>
             <div className="flex items-center justify-between">
               <div className="text-primary font-medium text-md ">
-                Rp{item.price}
+                Rp{item?.attributes.price}
               </div>
+
               <div className="text-xs text-gray-500 animate-pulse line-through ">
-                Rp {item.oldPrice}
+                {item.attributes.discount ? (
+                  <p>
+                    {" "}
+                    Rp{" "}
+                    {item.attributes.price +
+                      (item.attributes.price * item.attributes.discount) /
+                        100}{" "}
+                  </p>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>
