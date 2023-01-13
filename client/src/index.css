@@ -40,4 +40,7 @@
   .thumbnail-blog {
     @apply bg-gray-400 h-40 rounded-xl  p-4 bg-no-repeat bg-center bg-cover;
   }
+  .button-secondary{
+    @apply bg-card border border-primary text-primary rounded-xl py-3 px-4 flex;
+  }
 }
