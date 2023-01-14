@@ -3,6 +3,7 @@ import Blogs from "./components/Blogs/Blogs";
 import FooterSection from "./components/Footer/FooterSection";
 import Navbar from "./components/Navbar/NavbarEunoya";
 import Home from "./pages/Home/Home";
+import NotFound404 from "./pages/NotFound404/NotFound404";
 import Product from "./pages/Product/Product";
 import Products from "./pages/Products/Products";
 
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
     {
       path: "/blogs/:id",
       element: <Blogs/>,
+    },
+    {
+      path: "*",
+      element: <NotFound404/>,
     },
   ]
 
